@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="todo-app">
+        <button id="add-task-btn">新建任务</button>
+        <div id="task-form-modal" class="hidden">
+            <input type="text" id="task-text" placeholder="任务描述">
+            <input type="text" id="task-creator" placeholder="#创建者" list="creator-list">
+            <datalist id="creator-list"></datalist>
+            <input type="datetime-local" id="task-deadline" placeholder="截止时间">
+            <button onclick="addNewTask()">提交任务</button>
+            <button onclick="toggleTaskForm()">取消</button>
+        </div>
+        <div id="todo-list">
+            <h3>未完成</h3>
+            <ul id="incomplete-tasks">
+            </ul>
+        </div>
+        <div id="completed-list">
+            <h3>已完成</h3>
+            <ul id="completed-tasks">
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
